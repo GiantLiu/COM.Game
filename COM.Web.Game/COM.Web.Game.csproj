@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A50BF60C-87ED-4CE2-8106-827B039AF5DD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COM.Web.Game</RootNamespace>
+    <AssemblyName>COM.Web.Game</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="flappy\js\Asset.js" />
+    <Content Include="flappy\images\bg.png" />
+    <Content Include="flappy\js\Bird.js" />
+    <Content Include="flappy\images\bird.png" />
+    <Content Include="flappy\js\game.js" />
+    <Content Include="flappy\images\ground.png" />
+    <Content Include="flappy\js\hilo-flash.js" />
+    <Content Include="flappy\js\hilo-standalone.js" />
+    <Content Include="flappy\images\holdback.png" />
+    <Content Include="flappy\js\Holdbacks.js" />
+    <Content Include="flappy\index.html" />
+    <Content Include="flappy\images\number.png" />
+    <Content Include="flappy\images\over.png" />
+    <Content Include="flappy\js\OverScene.js" />
+    <Content Include="flappy\images\ready.png" />
+    <Content Include="flappy\js\ReadyScene.js" />
+    <Content Include="floppybird\assets\bird.png" />
+    <Content Include="floppybird\assets\ceiling.png" />
+    <Content Include="floppybird\assets\font_big_0.png" />
+    <Content Include="floppybird\assets\font_big_1.png" />
+    <Content Include="floppybird\assets\font_big_2.png" />
+    <Content Include="floppybird\assets\font_big_3.png" />
+    <Content Include="floppybird\assets\font_big_4.png" />
+    <Content Include="floppybird\assets\font_big_5.png" />
+    <Content Include="floppybird\assets\font_big_6.png" />
+    <Content Include="floppybird\assets\font_big_7.png" />
+    <Content Include="floppybird\assets\font_big_8.png" />
+    <Content Include="floppybird\assets\font_big_9.png" />
+    <Content Include="floppybird\assets\font_small_0.png" />
+    <Content Include="floppybird\assets\font_small_1.png" />
+    <Content Include="floppybird\assets\font_small_2.png" />
+    <Content Include="floppybird\assets\font_small_3.png" />
+    <Content Include="floppybird\assets\font_small_4.png" />
+    <Content Include="floppybird\assets\font_small_5.png" />
+    <Content Include="floppybird\assets\font_small_6.png" />
+    <Content Include="floppybird\assets\font_small_7.png" />
+    <Content Include="floppybird\assets\font_small_8.png" />
+    <Content Include="floppybird\assets\font_small_9.png" />
+    <Content Include="floppybird\assets\land.png" />
+    <Content Include="floppybird\assets\medal_bronze.png" />
+    <Content Include="floppybird\assets\medal_gold.png" />
+    <Content Include="floppybird\assets\medal_platinum.png" />
+    <Content Include="floppybird\assets\medal_silver.png" />
+    <Content Include="floppybird\assets\pipe-down.png" />
+    <Content Include="floppybird\assets\pipe-up.png" />
+    <Content Include="floppybird\assets\pipe.png" />
+    <Content Include="floppybird\assets\replay.png" />
+    <Content Include="floppybird\assets\scoreboard.png" />
+    <Content Include="floppybird\assets\sky.png" />
+    <Content Include="floppybird\assets\splash.png" />
+    <Content Include="floppybird\assets\thumb.png" />
+    <Content Include="floppybird\css\main.css" />
+    <Content Include="floppybird\css\reset.css" />
+    <Content Include="floppybird\index.html" />
+    <Content Include="floppybird\js\buzz.min.js" />
+    <Content Include="floppybird\js\jquery.min.js" />
+    <Content Include="floppybird\js\jquery.transit.min.js" />
+    <Content Include="floppybird\js\main.js" />
+    <Content Include="JollyJumper\assets\bg.png" />
+    <Content Include="JollyJumper\assets\cactus.png" />
+    <Content Include="JollyJumper\assets\coconut.png" />
+    <Content Include="JollyJumper\assets\credit\code.png" />
+    <Content Include="JollyJumper\assets\credit\credit-social-link.png" />
+    <Content Include="JollyJumper\assets\credit\devcredit.png" />
+    <Content Include="JollyJumper\assets\credit\shohan.png" />
+    <Content Include="JollyJumper\assets\font\font.png" />
+    <Content Include="JollyJumper\assets\fruits\banana_01.png" />
+    <Content Include="JollyJumper\assets\fruits\cherry.png" />
+    <Content Include="JollyJumper\assets\fruits\grape.png" />
+    <Content Include="JollyJumper\assets\fruits\pineapple.png" />
+    <Content Include="JollyJumper\assets\fruits\watermelon.png" />
+    <Content Include="JollyJumper\assets\gems-sprite.png" />
+    <Content Include="JollyJumper\assets\GUI\backward.png" />
+    <Content Include="JollyJumper\assets\GUI\b_More.png" />
+    <Content Include="JollyJumper\assets\GUI\credit.png" />
+    <Content Include="JollyJumper\assets\GUI\howToPlay.png" />
+    <Content Include="JollyJumper\assets\GUI\life.png" />
+    <Content Include="JollyJumper\assets\GUI\menu-title.png" />
+    <Content Include="JollyJumper\assets\GUI\pause.png" />
+    <Content Include="JollyJumper\assets\GUI\play.png" />
+    <Content Include="JollyJumper\assets\GUI\quit_.png" />
+    <Content Include="JollyJumper\assets\GUI\restart.png" />
+    <Content Include="JollyJumper\assets\GUI\resume.png" />
+    <Content Include="JollyJumper\assets\GUI\setting.png" />
+    <Content Include="JollyJumper\assets\GUI\sound.png" />
+    <Content Include="JollyJumper\assets\GUI\title_bg.png" />
+    <Content Include="JollyJumper\assets\how-to-play.png" />
+    <Content Include="JollyJumper\assets\platform.png" />
+    <Content Include="JollyJumper\assets\player\monkey.png" />
+    <Content Include="JollyJumper\index.html" />
+    <Content Include="JollyJumper\lib\phaser-debug.js" />
+    <Content Include="JollyJumper\lib\phaser.js" />
+    <Content Include="JollyJumper\lib\phaser.min.js" />
+    <Content Include="JollyJumper\lib\ScreenShake.js" />
+    <Content Include="JollyJumper\script\Boot.js" />
+    <Content Include="JollyJumper\script\Credit.js" />
+    <Content Include="JollyJumper\script\Help.js" />
+    <Content Include="JollyJumper\script\Leaderborad.js" />
+    <Content Include="JollyJumper\script\Main.js" />
+    <Content Include="JollyJumper\script\Menu.js" />
+    <Content Include="JollyJumper\script\objects\Background.js" />
+    <Content Include="JollyJumper\script\objects\fruits.js" />
+    <Content Include="JollyJumper\script\objects\platform.js" />
+    <Content Include="JollyJumper\script\objects\player.js" />
+    <Content Include="JollyJumper\script\Play.js" />
+    <Content Include="JollyJumper\script\Preload.js" />
+    <Content Include="JollyJumper\script\ui\Buttons.js" />
+    <Content Include="JollyJumper\script\ui\Score.js" />
+    <Content Include="JollyJumper\sounds\dap.m4a" />
+    <Content Include="JollyJumper\sounds\dap.mp3" />
+    <Content Include="JollyJumper\sounds\dap.wav" />
+    <Content Include="JollyJumper\sounds\dead.m4a" />
+    <Content Include="JollyJumper\sounds\dead.mp3" />
+    <Content Include="JollyJumper\sounds\dead.wav" />
+    <Content Include="JollyJumper\sounds\fruitGulp.m4a" />
+    <Content Include="JollyJumper\sounds\fruitGulp.mp3" />
+    <Content Include="JollyJumper\sounds\fruitGulp.wav" />
+    <Content Include="JollyJumper\sounds\gemSound.m4a" />
+    <Content Include="JollyJumper\sounds\gemSound.mp3" />
+    <Content Include="JollyJumper\sounds\gemSound.wav" />
+    <Content Include="JollyJumper\sounds\jump.m4a" />
+    <Content Include="JollyJumper\sounds\jump.mp3" />
+    <Content Include="JollyJumper\sounds\jump.wav" />
+    <Content Include="JollyJumper\sounds\menuBg.m4a" />
+    <Content Include="JollyJumper\sounds\menuBg.mp3" />
+    <Content Include="JollyJumper\sounds\menuBg.wav" />
+    <Content Include="Onslaught\css\horde.css" />
+    <Content Include="Onslaught\embeddable.html" />
+    <Content Include="Onslaught\horde.js" />
+    <Content Include="Onslaught\img\favicon.ico" />
+    <Content Include="Onslaught\img\frame_background.png" />
+    <Content Include="Onslaught\img\sheet_arena.png" />
+    <Content Include="Onslaught\img\sheet_beholder.png" />
+    <Content Include="Onslaught\img\sheet_characters.png" />
+    <Content Include="Onslaught\img\sheet_objects.png" />
+    <Content Include="Onslaught\img\sheet_ui.png" />
+    <Content Include="Onslaught\index.html" />
+    <Content Include="Onslaught\js\base.js" />
+    <Content Include="Onslaught\js\engine.js" />
+    <Content Include="Onslaught\js\horde.js" />
+    <Content Include="Onslaught\js\image_loader.js" />
+    <Content Include="Onslaught\js\keyboard.js" />
+    <Content Include="Onslaught\js\mouse.js" />
+    <Content Include="Onslaught\js\object.js" />
+    <Content Include="Onslaught\js\object_types.js" />
+    <Content Include="Onslaught\js\rect.js" />
+    <Content Include="Onslaught\js\run_game.js" />
+    <Content Include="Onslaught\js\size.js" />
+    <Content Include="Onslaught\js\sound.js" />
+    <Content Include="Onslaught\js\spawn_point.js" />
+    <Content Include="Onslaught\js\spawn_wave.js" />
+    <Content Include="Onslaught\js\timer.js" />
+    <Content Include="Onslaught\js\vector2.js" />
+    <Content Include="Onslaught\js\waves_demo.js" />
+    <Content Include="Onslaught\js\waves_full.js" />
+    <Content Include="Onslaught\robots.txt" />
+    <Content Include="Onslaught\sound\effects\bat_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\bat_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\beholder_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\beholder_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\char_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\char_attacks_fire.mp3" />
+    <Content Include="Onslaught\sound\effects\char_attacks_ice.mp3" />
+    <Content Include="Onslaught\sound\effects\char_damage_3.mp3" />
+    <Content Include="Onslaught\sound\effects\char_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\code_entered.mp3" />
+    <Content Include="Onslaught\sound\effects\coins.mp3" />
+    <Content Include="Onslaught\sound\effects\cube_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\cube_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\cube_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\cyclops_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\cyclops_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\cyclops_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\demoblin_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\dopp_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\dopp_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\dopp_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\dragon_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\dragon_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\dragon_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\eat_food.mp3" />
+    <Content Include="Onslaught\sound\effects\eyelet_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\eyelet_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\gate_closes.mp3" />
+    <Content Include="Onslaught\sound\effects\gate_opens.mp3" />
+    <Content Include="Onslaught\sound\effects\gel_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\gel_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\goblin_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\goblin_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\goblin_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\immunity.mp3" />
+    <Content Include="Onslaught\sound\effects\imp_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\imp_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\minotaur_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\minotaur_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\minotaur_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\move_pointer.mp3" />
+    <Content Include="Onslaught\sound\effects\owlbear_alarm.mp3" />
+    <Content Include="Onslaught\sound\effects\owlbear_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\owlbear_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\owlbear_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\pause.mp3" />
+    <Content Include="Onslaught\sound\effects\pickup_weapon.mp3" />
+    <Content Include="Onslaught\sound\effects\sandworm_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\sandworm_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\select_pointer.mp3" />
+    <Content Include="Onslaught\sound\effects\skull_damage.mp3" />
+    <Content Include="Onslaught\sound\effects\skull_dies.mp3" />
+    <Content Include="Onslaught\sound\effects\spike_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\unpause.mp3" />
+    <Content Include="Onslaught\sound\effects\weapon_wall.mp3" />
+    <Content Include="Onslaught\sound\effects\wizard_attacks.mp3" />
+    <Content Include="Onslaught\sound\effects\wizard_disappear.mp3" />
+    <Content Include="Onslaught\sound\effects\wizard_reappear.mp3" />
+    <Content Include="Onslaught\sound\music\final_battle.mp3" />
+    <Content Include="Onslaught\sound\music\normal_battle.mp3" />
+    <Content Include="Onslaught\sound\music\victory.mp3" />
+    <Content Include="packages.config" />
+    <Content Include="FruitNinja\sound\boom.ogg" />
+    <Content Include="FruitNinja\sound\menu.ogg" />
+    <Content Include="FruitNinja\sound\over.ogg" />
+    <Content Include="FruitNinja\sound\splatter.ogg" />
+    <Content Include="FruitNinja\sound\start.ogg" />
+    <Content Include="FruitNinja\sound\throw.ogg" />
+    <Content Include="2048\.gitignore" />
+    <Content Include="2048\.jshintrc" />
+    <Content Include="2048\CONTRIBUTING.md" />
+    <Content Include="2048\Rakefile" />
+    <Content Include="2048\README.md" />
+    <Content Include="2048\style\fonts\ClearSans-Bold-webfont.eot" />
+    <Content Include="2048\style\fonts\ClearSans-Bold-webfont.woff" />
+    <Content Include="2048\style\fonts\ClearSans-Light-webfont.eot" />
+    <Content Include="2048\style\fonts\ClearSans-Light-webfont.woff" />
+    <Content Include="2048\style\fonts\ClearSans-Regular-webfont.eot" />
+    <Content Include="2048\style\fonts\ClearSans-Regular-webfont.woff" />
+    <Content Include="2048\style\helpers.scss" />
+    <Content Include="2048\style\main.scss" />
+    <Content Include="AircraftWar\res\import\03\0382ef793.json" />
+    <Content Include="AircraftWar\res\import\04\043efbf45.json" />
+    <Content Include="AircraftWar\res\import\08\08b6709d7.json" />
+    <Content Include="AircraftWar\res\import\09\09021d9db.json" />
+    <Content Include="AircraftWar\res\import\0f\0f96dd93e.json" />
+    <Content Include="floppybird\.gitattributes" />
+    <Content Include="floppybird\.gitignore" />
+    <Content Include="floppybird\assets\font_big.psd" />
+    <Content Include="floppybird\assets\font_small.psd" />
+    <Content Include="floppybird\assets\sounds\sfx_die.ogg" />
+    <Content Include="floppybird\assets\sounds\sfx_hit.ogg" />
+    <Content Include="floppybird\assets\sounds\sfx_point.ogg" />
+    <Content Include="floppybird\assets\sounds\sfx_swooshing.ogg" />
+    <Content Include="floppybird\assets\sounds\sfx_wing.ogg" />
+    <Content Include="floppybird\LICENSE" />
+    <Content Include="floppybird\README.md" />
+    <Content Include="JollyJumper\.tern-project" />
+    <Content Include="JollyJumper\assets\font\font.fnt" />
+    <Content Include="JollyJumper\assets\player\.picasa.ini" />
+    <Content Include="JollyJumper\lib\README.md" />
+    <Content Include="JollyJumper\README.md" />
+    <Content Include="JollyJumper\sounds\dap.ogg" />
+    <Content Include="JollyJumper\sounds\dead.ogg" />
+    <Content Include="JollyJumper\sounds\fruitGulp.ogg" />
+    <Content Include="JollyJumper\sounds\gemSound.ogg" />
+    <Content Include="JollyJumper\sounds\jump.ogg" />
+    <Content Include="JollyJumper\sounds\menuBg.ogg" />
+    <Content Include="Onslaught\cache.manifest" />
+    <Content Include="Onslaught\font\cracked.ttf" />
+    <Content Include="Onslaught\font\MedievalSharp.ttf" />
+    <None Include="Properties\PublishProfiles\GiantLocal.pubxml" />
+    <Content Include="StreetFighter\images\g\bar.gif" />
+    <Content Include="StreetFighter\images\g\behind.gif" />
+    <Content Include="StreetFighter\images\g\fighterShadow.gif" />
+    <Content Include="StreetFighter\images\g\front.gif" />
+    <Content Include="StreetFighter\images\g\loading.jpg" />
+    <Content Include="StreetFighter\images\hitEffect\defense.gif" />
+    <Content Include="StreetFighter\images\hitEffect\heavy.gif" />
+    <Content Include="StreetFighter\images\hitEffect\light.gif" />
+    <Content Include="StreetFighter\images\magic\simpleFire.gif" />
+    <Content Include="StreetFighter\images\magic\transverseWave.gif" />
+    <Content Include="StreetFighter\images\magic\transverseWaveDisappear.gif" />
+    <Content Include="StreetFighter\images\RYU1\11.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_after_impact_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_after_whirl_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_beAttacked_bottom.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_beAttacked_electric.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_beAttacked_fall.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_beAttacked_fire.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_beAttacked_heavy.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_beAttacked_impact.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_beAttacked_top.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_before_fall_down.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_before_whirl_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_crouch.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_crouch_heavy_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_crouch_heavy_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_crouch_light_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_crouch_light_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_crouch_middle_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_crouch_middle_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_fall_down.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_goBack.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_goForward.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_heavy_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_impact_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jumpMoved_light_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jumpMoved_middle_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jumpUp.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jump_back.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jump_down.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jump_forward.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jump_heavy_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jump_heavy_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jump_light_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jump_light_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jump_middle_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_jump_middle_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_light_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_light_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_light_kick11.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_middle_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_near_heavy_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_near_heavy_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_near_light_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_near_light_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_near_middle_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_near_middle_kick.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_somesault_up.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_stand_crouch_defense.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_stand_up.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_stand_up_defense.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_wait.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_wave_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU1\RYU1_whirl_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_after_impact_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_after_whirl_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_beAttacked_bottom.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_beAttacked_electric.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_beAttacked_fall.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_beAttacked_fire.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_beAttacked_heavy.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_beAttacked_impact.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_beAttacked_top.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_before_fall_down.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_before_whirl_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_crouch.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_crouch_heavy_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_crouch_heavy_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_crouch_light_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_crouch_light_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_crouch_middle_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_crouch_middle_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_fall_down.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_goBack.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_goForward.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_heavy_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_impact_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jumpMoved_light_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jumpMoved_middle_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jumpUp.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jump_back.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jump_down.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jump_forward.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jump_heavy_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jump_heavy_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jump_light_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jump_light_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jump_middle_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_jump_middle_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_light_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_light_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_middle_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_near_heavy_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_near_heavy_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_near_light_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_near_light_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_near_middle_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_near_middle_kick.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_somesault_up.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_stand_crouch_defense.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_stand_up.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_stand_up_defense.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_wait.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_wave_boxing.gif" />
+    <Content Include="StreetFighter\images\RYU2\RYU2_whirl_kick.gif" />
+    <Content Include="StreetFighter\index.html" />
+    <Content Include="StreetFighter\js\ai.js" />
+    <Content Include="StreetFighter\js\class.js" />
+    <Content Include="StreetFighter\js\config.js" />
+    <Content Include="StreetFighter\js\game.js" />
+    <Content Include="StreetFighter\js\interface.js" />
+    <Content Include="StreetFighter\js\main.js" />
+    <Content Include="StreetFighter\js\map.js" />
+    <Content Include="StreetFighter\js\timer.js" />
+    <Content Include="StreetFighter\js\util.js" />
+    <Content Include="StreetFighter\sound\china.mp3" />
+    <Content Include="StreetFighter\sound\defense.mp3" />
+    <Content Include="StreetFighter\sound\fall.mp3" />
+    <Content Include="StreetFighter\sound\heavy_boxing.mp3" />
+    <Content Include="StreetFighter\sound\hit_heavy_boxing.mp3" />
+    <Content Include="StreetFighter\sound\hit_heavy_kick.mp3" />
+    <Content Include="StreetFighter\sound\hit_light.mp3" />
+    <Content Include="StreetFighter\sound\impact_boxing.mp3" />
+    <Content Include="StreetFighter\sound\light_boxing.mp3" />
+    <Content Include="StreetFighter\sound\middle_boxing.mp3" />
+    <Content Include="StreetFighter\sound\middle_boxing_hit.mp3" />
+    <Content Include="StreetFighter\sound\wave_boxing.mp3" />
+    <Content Include="StreetFighter\sound\whirl_kick.mp3" />
+    <Content Include="tetris\app-1.0.0.js.map" />
+    <Content Include="tetris\css-1.0.0.css.map" />
+    <Content Include="StreetFighter\images\g\Thumbs.db" />
+    <Content Include="StreetFighter\images\hitEffect\Thumbs.db" />
+    <Content Include="StreetFighter\images\magic\Thumbs.db" />
+    <Content Include="StreetFighter\images\RYU1\Thumbs.db" />
+    <Content Include="StreetFighter\images\RYU2\Thumbs.db" />
+    <Content Include="StreetFighter\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2048\favicon.ico" />
+    <Content Include="2048\index.html" />
+    <Content Include="2048\js\animframe_polyfill.js" />
+    <Content Include="2048\js\application.js" />
+    <Content Include="2048\js\bind_polyfill.js" />
+    <Content Include="2048\js\classlist_polyfill.js" />
+    <Content Include="2048\js\game_manager.js" />
+    <Content Include="2048\js\grid.js" />
+    <Content Include="2048\js\html_actuator.js" />
+    <Content Include="2048\js\keyboard_input_manager.js" />
+    <Content Include="2048\js\local_storage_manager.js" />
+    <Content Include="2048\js\tile.js" />
+    <Content Include="2048\LICENSE.txt" />
+    <Content Include="2048\meta\apple-touch-icon.png" />
+    <Content Include="2048\meta\apple-touch-startup-image-640x1096.png" />
+    <Content Include="2048\meta\apple-touch-startup-image-640x920.png" />
+    <Content Include="2048\style\fonts\clear-sans.css" />
+    <Content Include="2048\style\fonts\ClearSans-Bold-webfont.svg" />
+    <Content Include="2048\style\fonts\ClearSans-Light-webfont.svg" />
+    <Content Include="2048\style\fonts\ClearSans-Regular-webfont.svg" />
+    <Content Include="2048\style\main.css" />
+    <Content Include="AircraftWar\cocos2d-js-min.js" />
+    <Content Include="AircraftWar\index.html" />
+    <Content Include="AircraftWar\main.js" />
+    <Content Include="AircraftWar\res\raw-assets\sound\enemy1_down.mp3" />
+    <Content Include="AircraftWar\res\raw-assets\sound\enemy2_down.mp3" />
+    <Content Include="AircraftWar\res\raw-assets\sound\enemy3_down.mp3" />
+    <Content Include="AircraftWar\res\raw-assets\sound\game_music.mp3" />
+    <Content Include="AircraftWar\res\raw-assets\sound\game_over.mp3" />
+    <Content Include="AircraftWar\res\raw-assets\sound\get_bomb.mp3" />
+    <Content Include="AircraftWar\res\raw-assets\sound\get_double_laser.mp3" />
+    <Content Include="AircraftWar\res\raw-assets\sound\use_bomb.mp3" />
+    <Content Include="AircraftWar\res\raw-assets\Texture\btnbg.png" />
+    <Content Include="AircraftWar\res\raw-assets\Texture\btnbgPress.png" />
+    <Content Include="AircraftWar\res\raw-assets\Texture\shoot.png" />
+    <Content Include="AircraftWar\res\raw-assets\Texture\shoot_background.png" />
+    <Content Include="AircraftWar\res\raw-internal\image\default_btn_disabled.png" />
+    <Content Include="AircraftWar\res\raw-internal\image\default_btn_pressed.png" />
+    <Content Include="AircraftWar\res\raw-internal\image\default_panel.png" />
+    <Content Include="AircraftWar\res\raw-internal\image\default_scrollbar_vertical.png" />
+    <Content Include="AircraftWar\res\raw-internal\image\default_scrollbar_vertical_bg.png" />
+    <Content Include="AircraftWar\splash.png" />
+    <Content Include="AircraftWar\src\project.js" />
+    <Content Include="AircraftWar\src\settings.js" />
+    <Content Include="AircraftWar\style-desktop.css" />
+    <Content Include="AircraftWar\style-mobile.css" />
+    <Content Include="FruitNinja\images\background.jpg" />
+    <Content Include="FruitNinja\images\blank.gif" />
+    <Content Include="FruitNinja\images\developing.png" />
+    <Content Include="FruitNinja\images\dojo.png" />
+    <Content Include="FruitNinja\images\flash.png" />
+    <Content Include="FruitNinja\images\fork.gif" />
+    <Content Include="FruitNinja\images\fruit\apple-1.png" />
+    <Content Include="FruitNinja\images\fruit\apple-2.png" />
+    <Content Include="FruitNinja\images\fruit\apple.png" />
+    <Content Include="FruitNinja\images\fruit\banana-1.png" />
+    <Content Include="FruitNinja\images\fruit\banana-2.png" />
+    <Content Include="FruitNinja\images\fruit\banana.png" />
+    <Content Include="FruitNinja\images\fruit\basaha-1.png" />
+    <Content Include="FruitNinja\images\fruit\basaha-2.png" />
+    <Content Include="FruitNinja\images\fruit\basaha.png" />
+    <Content Include="FruitNinja\images\fruit\boom.png" />
+    <Content Include="FruitNinja\images\fruit\peach-1.png" />
+    <Content Include="FruitNinja\images\fruit\peach-2.png" />
+    <Content Include="FruitNinja\images\fruit\peach.png" />
+    <Content Include="FruitNinja\images\fruit\sandia-1.png" />
+    <Content Include="FruitNinja\images\fruit\sandia-2.png" />
+    <Content Include="FruitNinja\images\fruit\sandia.png" />
+    <Content Include="FruitNinja\images\game-over.png" />
+    <Content Include="FruitNinja\images\home-desc.png" />
+    <Content Include="FruitNinja\images\home-mask.png" />
+    <Content Include="FruitNinja\images\index.css" />
+    <Content Include="FruitNinja\images\logo.png" />
+    <Content Include="FruitNinja\images\lose.png" />
+    <Content Include="FruitNinja\images\new-game.png" />
+    <Content Include="FruitNinja\images\new.png" />
+    <Content Include="FruitNinja\images\ninja.png" />
+    <Content Include="FruitNinja\images\quit.png" />
+    <Content Include="FruitNinja\images\score.png" />
+    <Content Include="FruitNinja\images\shadow.png" />
+    <Content Include="FruitNinja\images\smoke.png" />
+    <Content Include="FruitNinja\images\x.png" />
+    <Content Include="FruitNinja\images\xf.png" />
+    <Content Include="FruitNinja\images\xx.png" />
+    <Content Include="FruitNinja\images\xxf.png" />
+    <Content Include="FruitNinja\images\xxx.png" />
+    <Content Include="FruitNinja\images\xxxf.png" />
+    <Content Include="FruitNinja\index.html" />
+    <Content Include="FruitNinja\scripts\all.js" />
+    <Content Include="FruitNinja\sound\boom.mp3" />
+    <Content Include="FruitNinja\sound\menu.mp3" />
+    <Content Include="FruitNinja\sound\over.mp3" />
+    <Content Include="FruitNinja\sound\splatter.mp3" />
+    <Content Include="FruitNinja\sound\start.mp3" />
+    <Content Include="FruitNinja\sound\throw.mp3" />
+    <Content Include="index.html" />
+    <Content Include="tetris\app-1.0.0.js" />
+    <Content Include="tetris\css-1.0.0.css" />
+    <Content Include="tetris\index.html" />
+    <Content Include="tetris\loader.css" />
+    <Content Include="tetris\music.mp3" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>27328</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:27328/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
