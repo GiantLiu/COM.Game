@@ -66,6 +66,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DoodleJump\2WEhF.png" />
+    <Content Include="DoodleJump\5BBsR.png" />
+    <Content Include="DoodleJump\index.html" />
+    <Content Include="DoodleJump\main.js" />
+    <Content Include="DoodleJump\style.css" />
+    <Content Include="DoodleJump\Y0BMP.png" />
     <Content Include="flappy\js\Asset.js" />
     <Content Include="flappy\images\bg.png" />
     <Content Include="flappy\js\Bird.js" />
@@ -333,6 +339,8 @@
     <Content Include="Onslaught\cache.manifest" />
     <Content Include="Onslaught\font\cracked.ttf" />
     <Content Include="Onslaught\font\MedievalSharp.ttf" />
+    <Content Include="DoodleJump\README.md" />
+    <Content Include="DoodleJump\fonts.woff2" />
     <None Include="Properties\PublishProfiles\GiantLocal.pubxml" />
     <Content Include="StreetFighter\images\g\bar.gif" />
     <Content Include="StreetFighter\images\g\behind.gif" />
